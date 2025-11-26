@@ -1,6 +1,7 @@
 ---
 import Cursor from "@/components/Cursor.tsx";
 import Navbar from "@/components/Navbar.astro"
+import BlackHole from "@/components/BlackHole/BlackHole.tsx"
 
 interface Props {
   title: string;
@@ -22,6 +23,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="text-neutral-400">
+    <BlackHole client:only />
 		<Navbar />
     <main>
       <slot />
@@ -49,7 +51,7 @@ const { title } = Astro.props;
       class="fixed right-0 bottom-0 w-[140px] lg:w-[300px] aspect-ratio-square rounded-full bg-violet-500 blur-[200px] opacity-50"
     >
     </div>
-    <Cursor client:only />
+    <!-- <Cursor client:only /> -->
   </body>
 </html>
 <style>
