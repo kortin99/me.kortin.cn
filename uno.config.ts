@@ -21,4 +21,9 @@ export default defineConfig({
       },
     }),
   ],
+  rules: [
+    ['animation-delay-0', { 'animation-delay': '0ms' }],
+    ['animation-delay-150', { 'animation-delay': '150ms' }],
+    ['animation-delay-300', { 'animation-delay': '300ms' }],
+  ],
 })

@@ -1,36 +1,60 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro";
-import GridBanner from "@/components/GridBanner.astro";
+import HomeLayout from '../layouts/HomeLayout.astro';
+import GridBanner from '@/components/GridBanner.astro';
+import LinkPreviewer from '@/components/LinkPreviewer';
+import Pacman from '@/components/Pacman';
 ---
 
 <HomeLayout title="Kortin's Profile">
   <GridBanner class="!sm:h-32 !lg:h-48">
-    <h1 class="leading-6 text-20px sm:text-[24px] lg:text-[28px]">Hello, <del>word!</del> world! 👋</h1>
+    <h1 class="leading-6 text-20px sm:text-[24px] lg:text-[28px]">
+      Hello, <del>word!</del> world! 👋
+    </h1>
   </GridBanner>
   <main class="max-w-[800px] text-neutral-400 mx-auto p-8">
+    <!-- <Pacman /> -->
     <p>
-      Hi, my name is Kortin, a passionate <span class="text-orange-500">front-end developer</span> rooted in the beautiful water city of Suzhou.
-      Currently, I'm contributing my skills and enthusiasm to the innovative travel tech company <a href="https://ly.com" data-hover class="text-violet-500">ly.com</a>.
+      Hi, I’m Kortin — a front-end engineer from Suzhou with a deep focus on
+      building reliable, thoughtful, and scalable user interfaces. I currently
+      work at <LinkPreviewer url="https://cloud.baidu.com" client:only
+        >cloud.baidu.com</LinkPreviewer
+      >, where I help design and develop complex web applications used across
+      the travel industry.
     </p>
     <p>
-      I am a front-end developer with more than
-      <span class="text-orange-500">{new Date().getFullYear() - 2021} years</span> of experience. I have been engaged
-      in front-end development since my graduation. I've been on a journey filled with challenges and creativity. To me, front-end development is more than just a profession; it's a form of magic that transforms imagination into reality, where every line of code is brimming with possibilities. I love solving problems with technology and relish the satisfaction of turning bland data into vibrant interfaces.
+      With over <span class="text-orange-500">{new Date().getFullYear() - 2021} years</span
+      > years of professional experience, I’ve worked on a wide range of projects,
+      including data development platforms, data asset management systems, and large-scale
+      data visualization tools. These experiences shaped my ability to turn messy,
+      high-dimensional information into clear, intuitive interfaces that teams can
+      actually use.
     </p>
     <p>
-      In this rapidly evolving field, I always maintain a learner's mindset, constantly updating my skill set from HTML/CSS/JavaScript to the latest frameworks and tools, striving for mastery. Sharing knowledge is also a great joy of my job. Whether through blogs, talks, or one-on-one conversations, I am eager to share my experiences and lessons with peers and beginners alike, because I believe in the power of spreading knowledge.
+      My day-to-day work spans modern front-end engineering:
+      <strong>
+        React 19, Next.js 15, Vue.js, TypeScript, monorepo architecture with
+        Turborepo, pnpm workspaces, motion design, performance tuning,
+      </strong>
+      and the practical realities of delivering products in enterprise
+      environments. Recently, I’ve also been contributing to an AI Infra
+      platform — covering model management, API gateways, usage tracking,
+      dataset operations, fine-tuning workflows, and observability tools like
+      Langfuse. This has broadened my perspective on how front-end engineering
+      supports AI-native systems.
     </p>
     <p>
-      Beyond work, I'm a loyal <span class="text-red-400">Nintendo</span>&nbsp;<span class="text-blue-400">Switch</span> fan. The <i>Legend of Zelda</i> series is my
-      favorite. It's not just my way to unwind but also a source of inspiration for my creativity. Additionally, I'm a movie enthusiast, with a special fondness for mind-bending sci-fi films that always spark my curiosity about the unknown.
+      I enjoy tackling problems that involve large systems, tricky edge cases, or complex states. Code for me isn’t decoration — it’s a tool to reduce complexity, create clarity, and make technology easier for people to interact with.
+    </p>
+    <p>
+      Outside of work, I’m a long-time <span class="text-red-400">Nintendo</span
+      >&nbsp;<span class="text-blue-400">Switch</span> fan.
+      The <i>Legend of Zelda</i> series has followed me through different stages of life, offering both comfort and creative inspiration. I also love films, especially science fiction that challenges how we think about reality and the future.
     </p>
 
     <p>
-      In short, I'm a dreamer who explores the world through code, eager to create products that make the world a better place with like-minded individuals.
+      In short, I’m a builder who appreciates both craft and curiosity — always learning, always refining, and always looking for meaningful ways to make digital experiences smoother, smarter, and more human.
     </p>
   </main>
 </HomeLayout>
 
-
-<style>
-</style>
+<style></style>

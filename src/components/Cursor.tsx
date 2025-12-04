@@ -7,6 +7,14 @@ interface Pacman {
 }
 
 export default function Cursor() {
+  // 移动端触摸设备不展示
+  if (
+    typeof window === "undefined" ||
+    (window.matchMedia && window.matchMedia("(pointer: coarse)").matches)
+  ) {
+    return null;
+  }
+
   const [dimensions, setDimensions] = createSignal({
     width: window.innerWidth,
     height: window.innerHeight,

@@ -1,0 +1,62 @@
+.pacman {
+  /* 可以配置的变量 */
+  --size: 100px;
+  --duration: 0.45s;
+  --pacman-color: #f5e000;
+}
+.pacman {
+  --half-size: calc(var(--size, 50px) / 2);
+  position: relative;
+  height: var(--size, 50px);
+  width: var(--size, 50px);
+}
+.pacman::before {
+  background-color: var(--pacman-color, #f5e000);
+  border-radius: var(--half-size) var(--half-size) 0 0;
+  content: '';
+  display: block;
+  height: var(--half-size);
+  width: var(--size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: center bottom;
+  will-change: transform;
+  animation: close var(--duration) infinite;
+}
+.pacman::after {
+  background-color: var(--pacman-color, #f5e000);
+  border-radius: 0 0 var(--half-size) var(--half-size);
+  content: '';
+  height: var(--half-size);
+  width: var(--size);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: center top;
+  will-change: transform;
+  animation: close var(--duration) infinite;
+}
+
+@-moz-keyframes close {
+  50% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes close {
+  50% {
+    transform: rotate(0);
+  }
+}
+@-o-keyframes close {
+  50% {
+    transform: rotate(0);
+  }
+}
+@keyframes close {
+  50% {
+    transform: rotate(0);
+  }
+}
